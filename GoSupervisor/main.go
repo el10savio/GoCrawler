@@ -1,9 +1,9 @@
 package main
 
-// GoSupervisor main.go insantaties the GoSupervisor net/http server  
+// GoSupervisor main.go insantaties the GoSupervisor net/http server
 // and establishes a connection to the RabbitMQ queue. It acts as a web
 // crawler proxy sending async crawl requests for each GoCrawler worker
-// node to process and aggregates the resultant crawled links for the client 
+// node to process and aggregates the resultant crawled links for the client
 
 import (
 	"net/http"
@@ -17,7 +17,7 @@ import (
 )
 
 const (
-	// PORT is the GoSupervisor 
+	// PORT is the GoSupervisor
 	// http server port
 	PORT = "8050"
 )

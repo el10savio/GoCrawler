@@ -33,7 +33,7 @@ func Publish(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// DEBUG log indicating 
+	// DEBUG log indicating
 	// successful URL publish
 	log.WithFields(log.Fields{
 		"URL": URL,

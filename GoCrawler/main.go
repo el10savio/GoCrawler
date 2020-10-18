@@ -1,8 +1,8 @@
 package main
 
-// GoCrawler main.go insantaties the GoCrawler worker node net/http server  
+// GoCrawler main.go insantaties the GoCrawler worker node net/http server
 // and establishes a connection to the RabbitMQ queue. It acts as a work queue
-// node sending & receiving async crawl requests to the RabbitMQ message bus 
+// node sending & receiving async crawl requests to the RabbitMQ message bus
 // and persisting its crawled links in the Postgres Database. http requests
 // a URL can also be sent directly to the node to process along with messages
 
@@ -19,7 +19,7 @@ import (
 )
 
 const (
-	// PORT is the GoCrawler 
+	// PORT is the GoCrawler
 	// http server port
 	PORT = "8080"
 )

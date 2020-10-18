@@ -5,13 +5,13 @@ import (
 	"net/http"
 )
 
-// InputBody represents the JSON 
-// POST message request body 
+// InputBody represents the JSON
+// POST message request body
 type InputBody struct {
 	URL string `json:"URL"`
 }
 
-// GetURL extracts the "URL" 
+// GetURL extracts the "URL"
 // entry from the JSON body
 func GetURL(r *http.Request) (string, error) {
 	var body InputBody

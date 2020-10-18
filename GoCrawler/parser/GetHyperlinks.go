@@ -8,7 +8,7 @@ import (
 )
 
 // GetHyperlinks process a given URL and the request to the UR
-// to obtain all the links in it. It does so by tokenizing the 
+// to obtain all the links in it. It does so by tokenizing the
 // result <html> body and identifies hyperlinks in it
 func GetHyperlinks(BaseURL string, response *http.Response) []string {
 	var links []string
@@ -26,7 +26,7 @@ func GetHyperlinks(BaseURL string, response *http.Response) []string {
 
 			url := GetLinkHelper(tokenTest.Attr)
 
-			// If parsed url is a redundant 
+			// If parsed url is a redundant
 			// or the same link discard it
 			if url == "" || url == "/" || url == "#" || url == BaseURL {
 				continue
@@ -39,7 +39,7 @@ func GetHyperlinks(BaseURL string, response *http.Response) []string {
 			}
 
 			// In the case of relative links
-			// prepend the original URL and 
+			// prepend the original URL and
 			// check if its valid
 			if ValidateURL(BaseURL+url) == nil {
 				links = append(links, BaseURL+url)
@@ -48,7 +48,7 @@ func GetHyperlinks(BaseURL string, response *http.Response) []string {
 	}
 }
 
-// GetLinkHelper iterates over the token attributes 
+// GetLinkHelper iterates over the token attributes
 // to search for the link type token
 func GetLinkHelper(tokenAttribute []html.Attribute) string {
 	if len(tokenAttribute) == 0 {
