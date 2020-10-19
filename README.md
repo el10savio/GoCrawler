@@ -10,8 +10,6 @@ Here using a supervisor worker server model we utilize a set of distributed work
 
 ![Crawler](Crawler.png)
 
-[Insert Image]
-
 
 ## Steps
 
