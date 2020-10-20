@@ -59,7 +59,7 @@ docker run -d --hostname rabbitmq --net $network -p 5672:5672 -p 15672:15672 --n
 sleep 30
 
 echo "Provisioning GoCrawler Postgres Docker Component"
-docker build -t go-crawler-postgres -f Postgres/Dockerfile .
+docker build -t go-crawler-postgres -f docker/postgres/Dockerfile .
 
 if [[ $? -ne 0 ]]; then
     echo "Unable To Build GoCrawler Postgres Docker Image"
@@ -101,8 +101,7 @@ comma_separated_workers=$(
 echo "Provisioning GoCrawler Docker Cluster"
 
 echo "Building GoCrawler Docker Image"
-cd GoCrawler
-docker build -t gocrawler -f Dockerfile .
+docker build -t gocrawler -f docker/Dockerfile.gocrwaler .
 
 if [[ $? -ne 0 ]]; then
     echo "Unable To Build GoCrawler Docker Image"
@@ -121,11 +120,10 @@ comma_separated_worker_id_list=$(
 for worker_index in "${!workers[@]}"; do
     docker run -p "${workers[$worker_index]}":8080 --net $network --name="gocrawler-$worker_index" -d gocrawler
 done
-cd -
 
 echo "Building GoCrawler GoSupervisor Docker Image"
-cd GoSupervisor
-docker build -t gosupervisor -f Dockerfile .
+
+docker build -t gosupervisor -f docker/Dockerfile.gosupervisor .
 
 if [[ $? -ne 0 ]]; then
     echo "Unable To Build GoCrawler GoSupervisor Docker Image"
@@ -133,7 +131,7 @@ if [[ $? -ne 0 ]]; then
 fi
 
 docker run -p 8050:8050 --net $network -d gosupervisor
-cd -
+
 
 # Docker list workers on success
 echo "GoCrawler Cluster Nodes"
