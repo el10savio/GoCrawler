@@ -1,4 +1,4 @@
-package messageBus
+package message_bus
 
 import (
 	"fmt"
