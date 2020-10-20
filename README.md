@@ -51,7 +51,7 @@ $ curl -X POST -d "{\"URL\": \"http://www.google.com\"}" http://localhost:8050/s
 $ curl -X POST -d "{\"URL\": \"http://www.google.com\"}" http://localhost:8050/spider/crawl
 ```
 
-When reading the list of values in they aggregate the visited sitemap and respond with a JSON tre like sitemap.
+When reading the list of values in they aggregate the visited sitemap and respond with a JSON tree like sitemap.
 
 ```
 $ curl -X POST -d "{\"URL\": \"http://www.google.com\"}" http://localhost:8050/spider/view
