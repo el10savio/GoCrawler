@@ -8,7 +8,7 @@ A web crawler traverses over a given webpage and find out the links present it. 
 
 Here using a supervisor worker server model we utilize a set of distributed worker nodes to process each page and a supervisor to communicate with the client and aggregate the results. We utilize RabbitMQ to send messages to the worker nodes and Postgres to persist these results.
 
-![Crawler](Crawler.png)
+![Crawler](crawler_diagram.png)
 
 
 ## Steps
