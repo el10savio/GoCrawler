@@ -52,7 +52,7 @@ func Initialize() (*sql.DB, error) {
 }
 
 // GetDB return the shared
-// *sql.DB vairable
+// *sql.DB variable
 func GetDB() *sql.DB {
 	return db
 }
