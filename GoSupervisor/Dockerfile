@@ -10,15 +10,15 @@ COPY . .
 
 RUN go get -d -v
 
-ENV RABBITMQ_HOST=rabbitmq
-ENV POSTGRES_HOST=postgres
-
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -a -installsuffix cgo -o /go/bin/GoSupervisor
 
 
 FROM scratch
 
 COPY --from=builder /go/bin/GoSupervisor /go/bin/GoSupervisor
+
+ENV RABBITMQ_HOST=rabbitmq
+ENV POSTGRES_HOST=postgres
 
 ENTRYPOINT ["/go/bin/GoSupervisor"]
 
