@@ -21,7 +21,7 @@ func InsertLink(Parent string, Link string) error {
 	return nil
 }
 
-// InsertLink sends a DB query to delete
+// RemoveLink sends a DB query to delete
 // a given link row for a given URL
 func RemoveLink(Link string) error {
 	db := GetDB()

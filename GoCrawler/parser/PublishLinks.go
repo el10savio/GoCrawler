@@ -26,7 +26,7 @@ func init() {
 	}
 }
 
-// Publish links messages to RabbitMQ
+// PublishLinks messages to RabbitMQ
 func PublishLinks(links []string) error {
 	if len(links) == 0 {
 		return nil

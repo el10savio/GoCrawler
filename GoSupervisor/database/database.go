@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 
+	// Postgres DB Driver
 	_ "github.com/lib/pq"
 )
 

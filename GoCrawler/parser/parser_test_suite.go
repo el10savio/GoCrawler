@@ -1,11 +1,15 @@
 package parser
 
+// ValidateURLTestCase is the test case
+// struct definition for ValidateURL()
 type ValidateURLTestCase struct {
 	Description   string
 	URL           string
 	ExpectedError error
 }
 
+// GetLinksTestCase is the test case
+// struct definition for GetLinks()
 type GetLinksTestCase struct {
 	Description   string
 	URL           string
@@ -13,6 +17,7 @@ type GetLinksTestCase struct {
 	ExpectedError error
 }
 
+// ValidateURLTestSuite is the test suite cases for ValidateURL()
 var ValidateURLTestSuite = []ValidateURLTestCase{
 	ValidateURLTestCase{
 		Description:   "Validate Valid URL",
@@ -66,6 +71,7 @@ var ValidateURLTestSuite = []ValidateURLTestCase{
 	},
 }
 
+// GetLinksTestSuite is the test suite cases for GetLinks()
 var GetLinksTestSuite = []GetLinksTestCase{
 	GetLinksTestCase{
 		Description:   "http://blank.org/",

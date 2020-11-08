@@ -26,7 +26,7 @@ func init() {
 	}
 }
 
-// Publish link message to RabbitMQ
+// PublishLink message to RabbitMQ
 func PublishLink(link string) error {
 	// Create message from the given link
 	message := messageBus.CreateMessage(link)
