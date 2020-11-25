@@ -63,7 +63,7 @@ $ curl -X POST -d "{\"URL\": \"http://www.google.com\"}" http://localhost:8050/s
       "links": null
     },
     {
-      "url": "http://www.monzo.com/contact",
+      "url": "http://www.google.com/contact",
       "links": null
     },
     ...
