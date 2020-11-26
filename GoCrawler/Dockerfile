@@ -8,7 +8,7 @@ WORKDIR /goCrawler
 
 COPY . .
 
-RUN go get -d -v
+RUN go mod download
 
 ENV RABBITMQ_HOST=rabbitmq
 ENV POSTGRES_HOST=postgres

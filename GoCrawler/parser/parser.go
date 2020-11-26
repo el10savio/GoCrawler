@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"time"
 
-	"../database"
+	"github.com/el10savio/GoCrawler/GoCrawler/database"
 	log "github.com/sirupsen/logrus"
 )
 

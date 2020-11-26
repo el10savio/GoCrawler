@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"../messageBus"
+	"github.com/el10savio/GoCrawler/GoCrawler/messageBus"
 	"github.com/streadway/amqp"
 )
 

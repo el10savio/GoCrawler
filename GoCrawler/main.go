@@ -12,10 +12,10 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"./database"
-	"./handlers"
-	"./messageBus"
-	"./parser"
+	"github.com/el10savio/GoCrawler/GoCrawler/database"
+	"github.com/el10savio/GoCrawler/GoCrawler/handlers"
+	"github.com/el10savio/GoCrawler/GoCrawler/messageBus"
+	"github.com/el10savio/GoCrawler/GoCrawler/parser"
 )
 
 const (

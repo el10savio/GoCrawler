@@ -6,7 +6,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"../parser"
+	"github.com/el10savio/GoCrawler/GoCrawler/parser"
 )
 
 // ParseHandler is the http handler for /crawler/parse to process
