@@ -1,7 +1,7 @@
 package spider
 
 import (
-	"../messageBus"
+	"github.com/el10savio/GoCrawler/GoSupervisor/messageBus"
 	"github.com/streadway/amqp"
 )
 

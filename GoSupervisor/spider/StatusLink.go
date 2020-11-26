@@ -1,7 +1,7 @@
 package spider
 
 import (
-	"../database"
+	"github.com/el10savio/GoCrawler/GoSupervisor/database"
 )
 
 // Status struct is a tree like data structure

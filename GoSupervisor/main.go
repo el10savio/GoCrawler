@@ -11,9 +11,9 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"./database"
-	"./handlers"
-	"./messageBus"
+	"github.com/el10savio/GoCrawler/GoSupervisor/database"
+	"github.com/el10savio/GoCrawler/GoSupervisor/handlers"
+	"github.com/el10savio/GoCrawler/GoSupervisor/messageBus"
 )
 
 const (

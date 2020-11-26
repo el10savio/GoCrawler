@@ -5,7 +5,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"../spider"
+	"github.com/el10savio/GoCrawler/GoSupervisor/spider"
 )
 
 // Publish is the http handler for /spider/crawl to process
