@@ -1,6 +1,6 @@
 # GoCrawler
 
-A distributed web crawler implemented using Go, Postgres, RabbitMQ and Docker
+A distributed asynchronus web crawler implemented using Go, Postgres, RabbitMQ and Docker
 
 ## Introduction
 
